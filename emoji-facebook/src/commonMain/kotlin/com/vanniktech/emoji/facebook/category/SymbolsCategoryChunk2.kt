@@ -17,17 +17,18 @@
 package com.vanniktech.emoji.facebook.category
 
 import com.vanniktech.emoji.facebook.FacebookEmoji
+import de.cketti.codepoints.CodePoints
 
 internal object SymbolsCategoryChunk2 {
   internal val EMOJIS: List<FacebookEmoji> = listOf(
-    FacebookEmoji(String(intArrayOf(0x1F537), 0, 1), listOf("large_blue_diamond"), 30, 47),
-    FacebookEmoji(String(intArrayOf(0x1F538), 0, 1), listOf("small_orange_diamond"), 30, 48),
-    FacebookEmoji(String(intArrayOf(0x1F539), 0, 1), listOf("small_blue_diamond"), 30, 49),
-    FacebookEmoji(String(intArrayOf(0x1F53A), 0, 1), listOf("small_red_triangle"), 30, 50),
-    FacebookEmoji(String(intArrayOf(0x1F53B), 0, 1), listOf("small_red_triangle_down"), 30, 51),
-    FacebookEmoji(String(intArrayOf(0x1F4A0), 0, 1), listOf("diamond_shape_with_a_dot_inside"), 28, 16),
-    FacebookEmoji(String(intArrayOf(0x1F518), 0, 1), listOf("radio_button"), 30, 16),
-    FacebookEmoji(String(intArrayOf(0x1F533), 0, 1), listOf("white_square_button"), 30, 43),
-    FacebookEmoji(String(intArrayOf(0x1F532), 0, 1), listOf("black_square_button"), 30, 42),
+    FacebookEmoji(CodePoints.toString(0x1F537), listOf("large_blue_diamond"), 30, 47),
+    FacebookEmoji(CodePoints.toString(0x1F538), listOf("small_orange_diamond"), 30, 48),
+    FacebookEmoji(CodePoints.toString(0x1F539), listOf("small_blue_diamond"), 30, 49),
+    FacebookEmoji(CodePoints.toString(0x1F53A), listOf("small_red_triangle"), 30, 50),
+    FacebookEmoji(CodePoints.toString(0x1F53B), listOf("small_red_triangle_down"), 30, 51),
+    FacebookEmoji(CodePoints.toString(0x1F4A0), listOf("diamond_shape_with_a_dot_inside"), 28, 16),
+    FacebookEmoji(CodePoints.toString(0x1F518), listOf("radio_button"), 30, 16),
+    FacebookEmoji(CodePoints.toString(0x1F533), listOf("white_square_button"), 30, 43),
+    FacebookEmoji(CodePoints.toString(0x1F532), listOf("black_square_button"), 30, 42),
   )
 }

@@ -17,63 +17,64 @@
 package com.vanniktech.emoji.twitter.category
 
 import com.vanniktech.emoji.twitter.TwitterEmoji
+import de.cketti.codepoints.CodePoints
 
 internal object SymbolsCategoryChunk2 {
   internal val EMOJIS: List<TwitterEmoji> = listOf(
-    TwitterEmoji(String(intArrayOf(0x1F7E8), 0, 1), listOf("large_yellow_square"), 39, 18),
-    TwitterEmoji(String(intArrayOf(0x1F7E9), 0, 1), listOf("large_green_square"), 39, 19),
-    TwitterEmoji(String(intArrayOf(0x1F7E6), 0, 1), listOf("large_blue_square"), 39, 16),
-    TwitterEmoji(String(intArrayOf(0x1F7EA), 0, 1), listOf("large_purple_square"), 39, 20),
-    TwitterEmoji(String(intArrayOf(0x1F7EB), 0, 1), listOf("large_brown_square"), 39, 21),
-    TwitterEmoji(String(intArrayOf(0x2B1B), 0, 1), listOf("black_large_square"), 60, 50),
-    TwitterEmoji(String(intArrayOf(0x2B1C), 0, 1), listOf("white_large_square"), 60, 51),
+    TwitterEmoji(CodePoints.toString(0x1F7E8), listOf("large_yellow_square"), 39, 18),
+    TwitterEmoji(CodePoints.toString(0x1F7E9), listOf("large_green_square"), 39, 19),
+    TwitterEmoji(CodePoints.toString(0x1F7E6), listOf("large_blue_square"), 39, 16),
+    TwitterEmoji(CodePoints.toString(0x1F7EA), listOf("large_purple_square"), 39, 20),
+    TwitterEmoji(CodePoints.toString(0x1F7EB), listOf("large_brown_square"), 39, 21),
+    TwitterEmoji(CodePoints.toString(0x2B1B), listOf("black_large_square"), 60, 50),
+    TwitterEmoji(CodePoints.toString(0x2B1C), listOf("white_large_square"), 60, 51),
     TwitterEmoji(
-      unicode = String(intArrayOf(0x25FC), 0, 1),
+      unicode = CodePoints.toString(0x25FC),
       shortcodes = listOf("black_medium_square"),
       x = 58,
       y = 5,
       variants = listOf(
-        TwitterEmoji(String(intArrayOf(0x25FC, 0xFE0F), 0, 2), emptyList(), 58, 5),
+        TwitterEmoji(CodePoints.toString(0x25FC, 0xFE0F), emptyList(), 58, 5),
       ),
     ),
     TwitterEmoji(
-      unicode = String(intArrayOf(0x25FB), 0, 1),
+      unicode = CodePoints.toString(0x25FB),
       shortcodes = listOf("white_medium_square"),
       x = 58,
       y = 4,
       variants = listOf(
-        TwitterEmoji(String(intArrayOf(0x25FB, 0xFE0F), 0, 2), emptyList(), 58, 4),
+        TwitterEmoji(CodePoints.toString(0x25FB, 0xFE0F), emptyList(), 58, 4),
       ),
     ),
-    TwitterEmoji(String(intArrayOf(0x25FE), 0, 1), listOf("black_medium_small_square"), 58, 7),
-    TwitterEmoji(String(intArrayOf(0x25FD), 0, 1), listOf("white_medium_small_square"), 58, 6),
+    TwitterEmoji(CodePoints.toString(0x25FE), listOf("black_medium_small_square"), 58, 7),
+    TwitterEmoji(CodePoints.toString(0x25FD), listOf("white_medium_small_square"), 58, 6),
     TwitterEmoji(
-      unicode = String(intArrayOf(0x25AA), 0, 1),
+      unicode = CodePoints.toString(0x25AA),
       shortcodes = listOf("black_small_square"),
       x = 58,
       y = 0,
       variants = listOf(
-        TwitterEmoji(String(intArrayOf(0x25AA, 0xFE0F), 0, 2), emptyList(), 58, 0),
+        TwitterEmoji(CodePoints.toString(0x25AA, 0xFE0F), emptyList(), 58, 0),
       ),
     ),
     TwitterEmoji(
-      unicode = String(intArrayOf(0x25AB), 0, 1),
+      unicode = CodePoints.toString(0x25AB),
       shortcodes = listOf("white_small_square"),
       x = 58,
       y = 1,
       variants = listOf(
-        TwitterEmoji(String(intArrayOf(0x25AB, 0xFE0F), 0, 2), emptyList(), 58, 1),
+        TwitterEmoji(CodePoints.toString(0x25AB, 0xFE0F), emptyList(), 58, 1),
       ),
     ),
-    TwitterEmoji(String(intArrayOf(0x1F536), 0, 1), listOf("large_orange_diamond"), 30, 46),
-    TwitterEmoji(String(intArrayOf(0x1F537), 0, 1), listOf("large_blue_diamond"), 30, 47),
-    TwitterEmoji(String(intArrayOf(0x1F538), 0, 1), listOf("small_orange_diamond"), 30, 48),
-    TwitterEmoji(String(intArrayOf(0x1F539), 0, 1), listOf("small_blue_diamond"), 30, 49),
-    TwitterEmoji(String(intArrayOf(0x1F53A), 0, 1), listOf("small_red_triangle"), 30, 50),
-    TwitterEmoji(String(intArrayOf(0x1F53B), 0, 1), listOf("small_red_triangle_down"), 30, 51),
-    TwitterEmoji(String(intArrayOf(0x1F4A0), 0, 1), listOf("diamond_shape_with_a_dot_inside"), 28, 16),
-    TwitterEmoji(String(intArrayOf(0x1F518), 0, 1), listOf("radio_button"), 30, 16),
-    TwitterEmoji(String(intArrayOf(0x1F533), 0, 1), listOf("white_square_button"), 30, 43),
-    TwitterEmoji(String(intArrayOf(0x1F532), 0, 1), listOf("black_square_button"), 30, 42),
+    TwitterEmoji(CodePoints.toString(0x1F536), listOf("large_orange_diamond"), 30, 46),
+    TwitterEmoji(CodePoints.toString(0x1F537), listOf("large_blue_diamond"), 30, 47),
+    TwitterEmoji(CodePoints.toString(0x1F538), listOf("small_orange_diamond"), 30, 48),
+    TwitterEmoji(CodePoints.toString(0x1F539), listOf("small_blue_diamond"), 30, 49),
+    TwitterEmoji(CodePoints.toString(0x1F53A), listOf("small_red_triangle"), 30, 50),
+    TwitterEmoji(CodePoints.toString(0x1F53B), listOf("small_red_triangle_down"), 30, 51),
+    TwitterEmoji(CodePoints.toString(0x1F4A0), listOf("diamond_shape_with_a_dot_inside"), 28, 16),
+    TwitterEmoji(CodePoints.toString(0x1F518), listOf("radio_button"), 30, 16),
+    TwitterEmoji(CodePoints.toString(0x1F533), listOf("white_square_button"), 30, 43),
+    TwitterEmoji(CodePoints.toString(0x1F532), listOf("black_square_button"), 30, 42),
   )
 }

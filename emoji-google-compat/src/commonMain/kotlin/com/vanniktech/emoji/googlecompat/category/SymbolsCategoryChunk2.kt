@@ -17,55 +17,56 @@
 package com.vanniktech.emoji.googlecompat.category
 
 import com.vanniktech.emoji.googlecompat.GoogleCompatEmoji
+import de.cketti.codepoints.CodePoints
 
 internal object SymbolsCategoryChunk2 {
   internal val EMOJIS: List<GoogleCompatEmoji> = listOf(
-    GoogleCompatEmoji(String(intArrayOf(0x1F7E8), 0, 1), listOf("large_yellow_square")),
-    GoogleCompatEmoji(String(intArrayOf(0x1F7E9), 0, 1), listOf("large_green_square")),
-    GoogleCompatEmoji(String(intArrayOf(0x1F7E6), 0, 1), listOf("large_blue_square")),
-    GoogleCompatEmoji(String(intArrayOf(0x1F7EA), 0, 1), listOf("large_purple_square")),
-    GoogleCompatEmoji(String(intArrayOf(0x1F7EB), 0, 1), listOf("large_brown_square")),
-    GoogleCompatEmoji(String(intArrayOf(0x2B1B), 0, 1), listOf("black_large_square")),
-    GoogleCompatEmoji(String(intArrayOf(0x2B1C), 0, 1), listOf("white_large_square")),
+    GoogleCompatEmoji(CodePoints.toString(0x1F7E8), listOf("large_yellow_square")),
+    GoogleCompatEmoji(CodePoints.toString(0x1F7E9), listOf("large_green_square")),
+    GoogleCompatEmoji(CodePoints.toString(0x1F7E6), listOf("large_blue_square")),
+    GoogleCompatEmoji(CodePoints.toString(0x1F7EA), listOf("large_purple_square")),
+    GoogleCompatEmoji(CodePoints.toString(0x1F7EB), listOf("large_brown_square")),
+    GoogleCompatEmoji(CodePoints.toString(0x2B1B), listOf("black_large_square")),
+    GoogleCompatEmoji(CodePoints.toString(0x2B1C), listOf("white_large_square")),
     GoogleCompatEmoji(
-      unicode = String(intArrayOf(0x25FC), 0, 1),
+      unicode = CodePoints.toString(0x25FC),
       shortcodes = listOf("black_medium_square"),
       variants = listOf(
-        GoogleCompatEmoji(String(intArrayOf(0x25FC, 0xFE0F), 0, 2), emptyList()),
+        GoogleCompatEmoji(CodePoints.toString(0x25FC, 0xFE0F), emptyList()),
       ),
     ),
     GoogleCompatEmoji(
-      unicode = String(intArrayOf(0x25FB), 0, 1),
+      unicode = CodePoints.toString(0x25FB),
       shortcodes = listOf("white_medium_square"),
       variants = listOf(
-        GoogleCompatEmoji(String(intArrayOf(0x25FB, 0xFE0F), 0, 2), emptyList()),
+        GoogleCompatEmoji(CodePoints.toString(0x25FB, 0xFE0F), emptyList()),
       ),
     ),
-    GoogleCompatEmoji(String(intArrayOf(0x25FE), 0, 1), listOf("black_medium_small_square")),
-    GoogleCompatEmoji(String(intArrayOf(0x25FD), 0, 1), listOf("white_medium_small_square")),
+    GoogleCompatEmoji(CodePoints.toString(0x25FE), listOf("black_medium_small_square")),
+    GoogleCompatEmoji(CodePoints.toString(0x25FD), listOf("white_medium_small_square")),
     GoogleCompatEmoji(
-      unicode = String(intArrayOf(0x25AA), 0, 1),
+      unicode = CodePoints.toString(0x25AA),
       shortcodes = listOf("black_small_square"),
       variants = listOf(
-        GoogleCompatEmoji(String(intArrayOf(0x25AA, 0xFE0F), 0, 2), emptyList()),
+        GoogleCompatEmoji(CodePoints.toString(0x25AA, 0xFE0F), emptyList()),
       ),
     ),
     GoogleCompatEmoji(
-      unicode = String(intArrayOf(0x25AB), 0, 1),
+      unicode = CodePoints.toString(0x25AB),
       shortcodes = listOf("white_small_square"),
       variants = listOf(
-        GoogleCompatEmoji(String(intArrayOf(0x25AB, 0xFE0F), 0, 2), emptyList()),
+        GoogleCompatEmoji(CodePoints.toString(0x25AB, 0xFE0F), emptyList()),
       ),
     ),
-    GoogleCompatEmoji(String(intArrayOf(0x1F536), 0, 1), listOf("large_orange_diamond")),
-    GoogleCompatEmoji(String(intArrayOf(0x1F537), 0, 1), listOf("large_blue_diamond")),
-    GoogleCompatEmoji(String(intArrayOf(0x1F538), 0, 1), listOf("small_orange_diamond")),
-    GoogleCompatEmoji(String(intArrayOf(0x1F539), 0, 1), listOf("small_blue_diamond")),
-    GoogleCompatEmoji(String(intArrayOf(0x1F53A), 0, 1), listOf("small_red_triangle")),
-    GoogleCompatEmoji(String(intArrayOf(0x1F53B), 0, 1), listOf("small_red_triangle_down")),
-    GoogleCompatEmoji(String(intArrayOf(0x1F4A0), 0, 1), listOf("diamond_shape_with_a_dot_inside")),
-    GoogleCompatEmoji(String(intArrayOf(0x1F518), 0, 1), listOf("radio_button")),
-    GoogleCompatEmoji(String(intArrayOf(0x1F533), 0, 1), listOf("white_square_button")),
-    GoogleCompatEmoji(String(intArrayOf(0x1F532), 0, 1), listOf("black_square_button")),
+    GoogleCompatEmoji(CodePoints.toString(0x1F536), listOf("large_orange_diamond")),
+    GoogleCompatEmoji(CodePoints.toString(0x1F537), listOf("large_blue_diamond")),
+    GoogleCompatEmoji(CodePoints.toString(0x1F538), listOf("small_orange_diamond")),
+    GoogleCompatEmoji(CodePoints.toString(0x1F539), listOf("small_blue_diamond")),
+    GoogleCompatEmoji(CodePoints.toString(0x1F53A), listOf("small_red_triangle")),
+    GoogleCompatEmoji(CodePoints.toString(0x1F53B), listOf("small_red_triangle_down")),
+    GoogleCompatEmoji(CodePoints.toString(0x1F4A0), listOf("diamond_shape_with_a_dot_inside")),
+    GoogleCompatEmoji(CodePoints.toString(0x1F518), listOf("radio_button")),
+    GoogleCompatEmoji(CodePoints.toString(0x1F533), listOf("white_square_button")),
+    GoogleCompatEmoji(CodePoints.toString(0x1F532), listOf("black_square_button")),
   )
 }

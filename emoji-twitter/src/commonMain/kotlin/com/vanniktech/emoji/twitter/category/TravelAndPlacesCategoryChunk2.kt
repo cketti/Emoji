@@ -17,98 +17,99 @@
 package com.vanniktech.emoji.twitter.category
 
 import com.vanniktech.emoji.twitter.TwitterEmoji
+import de.cketti.codepoints.CodePoints
 
 internal object TravelAndPlacesCategoryChunk2 {
   internal val EMOJIS: List<TwitterEmoji> = listOf(
     TwitterEmoji(
-      unicode = String(intArrayOf(0x1F329), 0, 1),
+      unicode = CodePoints.toString(0x1F329),
       shortcodes = listOf("lightning", "lightning_cloud"),
       x = 5,
       y = 33,
       variants = listOf(
-        TwitterEmoji(String(intArrayOf(0x1F329, 0xFE0F), 0, 2), emptyList(), 5, 33),
+        TwitterEmoji(CodePoints.toString(0x1F329, 0xFE0F), emptyList(), 5, 33),
       ),
     ),
     TwitterEmoji(
-      unicode = String(intArrayOf(0x1F32A), 0, 1),
+      unicode = CodePoints.toString(0x1F32A),
       shortcodes = listOf("tornado", "tornado_cloud"),
       x = 5,
       y = 34,
       variants = listOf(
-        TwitterEmoji(String(intArrayOf(0x1F32A, 0xFE0F), 0, 2), emptyList(), 5, 34),
+        TwitterEmoji(CodePoints.toString(0x1F32A, 0xFE0F), emptyList(), 5, 34),
       ),
     ),
     TwitterEmoji(
-      unicode = String(intArrayOf(0x1F32B), 0, 1),
+      unicode = CodePoints.toString(0x1F32B),
       shortcodes = listOf("fog"),
       x = 5,
       y = 35,
       variants = listOf(
-        TwitterEmoji(String(intArrayOf(0x1F32B, 0xFE0F), 0, 2), emptyList(), 5, 35),
+        TwitterEmoji(CodePoints.toString(0x1F32B, 0xFE0F), emptyList(), 5, 35),
       ),
     ),
     TwitterEmoji(
-      unicode = String(intArrayOf(0x1F32C), 0, 1),
+      unicode = CodePoints.toString(0x1F32C),
       shortcodes = listOf("wind_blowing_face"),
       x = 5,
       y = 36,
       variants = listOf(
-        TwitterEmoji(String(intArrayOf(0x1F32C, 0xFE0F), 0, 2), emptyList(), 5, 36),
+        TwitterEmoji(CodePoints.toString(0x1F32C, 0xFE0F), emptyList(), 5, 36),
       ),
     ),
-    TwitterEmoji(String(intArrayOf(0x1F300), 0, 1), listOf("cyclone"), 4, 56),
-    TwitterEmoji(String(intArrayOf(0x1F308), 0, 1), listOf("rainbow"), 5, 2),
-    TwitterEmoji(String(intArrayOf(0x1F302), 0, 1), listOf("closed_umbrella"), 4, 58),
+    TwitterEmoji(CodePoints.toString(0x1F300), listOf("cyclone"), 4, 56),
+    TwitterEmoji(CodePoints.toString(0x1F308), listOf("rainbow"), 5, 2),
+    TwitterEmoji(CodePoints.toString(0x1F302), listOf("closed_umbrella"), 4, 58),
     TwitterEmoji(
-      unicode = String(intArrayOf(0x2602), 0, 1),
+      unicode = CodePoints.toString(0x2602),
       shortcodes = listOf("umbrella"),
       x = 58,
       y = 10,
       variants = listOf(
-        TwitterEmoji(String(intArrayOf(0x2602, 0xFE0F), 0, 2), emptyList(), 58, 10),
+        TwitterEmoji(CodePoints.toString(0x2602, 0xFE0F), emptyList(), 58, 10),
       ),
     ),
-    TwitterEmoji(String(intArrayOf(0x2614), 0, 1), listOf("umbrella_with_rain_drops"), 58, 15),
+    TwitterEmoji(CodePoints.toString(0x2614), listOf("umbrella_with_rain_drops"), 58, 15),
     TwitterEmoji(
-      unicode = String(intArrayOf(0x26F1), 0, 1),
+      unicode = CodePoints.toString(0x26F1),
       shortcodes = listOf("umbrella_on_ground"),
       x = 59,
       y = 25,
       variants = listOf(
-        TwitterEmoji(String(intArrayOf(0x26F1, 0xFE0F), 0, 2), emptyList(), 59, 25),
+        TwitterEmoji(CodePoints.toString(0x26F1, 0xFE0F), emptyList(), 59, 25),
       ),
     ),
-    TwitterEmoji(String(intArrayOf(0x26A1), 0, 1), listOf("zap"), 59, 5),
+    TwitterEmoji(CodePoints.toString(0x26A1), listOf("zap"), 59, 5),
     TwitterEmoji(
-      unicode = String(intArrayOf(0x2744), 0, 1),
+      unicode = CodePoints.toString(0x2744),
       shortcodes = listOf("snowflake"),
       x = 60,
       y = 27,
       variants = listOf(
-        TwitterEmoji(String(intArrayOf(0x2744, 0xFE0F), 0, 2), emptyList(), 60, 27),
+        TwitterEmoji(CodePoints.toString(0x2744, 0xFE0F), emptyList(), 60, 27),
       ),
     ),
     TwitterEmoji(
-      unicode = String(intArrayOf(0x2603), 0, 1),
+      unicode = CodePoints.toString(0x2603),
       shortcodes = listOf("snowman"),
       x = 58,
       y = 11,
       variants = listOf(
-        TwitterEmoji(String(intArrayOf(0x2603, 0xFE0F), 0, 2), emptyList(), 58, 11),
+        TwitterEmoji(CodePoints.toString(0x2603, 0xFE0F), emptyList(), 58, 11),
       ),
     ),
-    TwitterEmoji(String(intArrayOf(0x26C4), 0, 1), listOf("snowman_without_snow"), 59, 13),
+    TwitterEmoji(CodePoints.toString(0x26C4), listOf("snowman_without_snow"), 59, 13),
     TwitterEmoji(
-      unicode = String(intArrayOf(0x2604), 0, 1),
+      unicode = CodePoints.toString(0x2604),
       shortcodes = listOf("comet"),
       x = 58,
       y = 12,
       variants = listOf(
-        TwitterEmoji(String(intArrayOf(0x2604, 0xFE0F), 0, 2), emptyList(), 58, 12),
+        TwitterEmoji(CodePoints.toString(0x2604, 0xFE0F), emptyList(), 58, 12),
       ),
     ),
-    TwitterEmoji(String(intArrayOf(0x1F525), 0, 1), listOf("fire"), 30, 29),
-    TwitterEmoji(String(intArrayOf(0x1F4A7), 0, 1), listOf("droplet"), 28, 23),
-    TwitterEmoji(String(intArrayOf(0x1F30A), 0, 1), listOf("ocean"), 5, 4),
+    TwitterEmoji(CodePoints.toString(0x1F525), listOf("fire"), 30, 29),
+    TwitterEmoji(CodePoints.toString(0x1F4A7), listOf("droplet"), 28, 23),
+    TwitterEmoji(CodePoints.toString(0x1F30A), listOf("ocean"), 5, 4),
   )
 }
