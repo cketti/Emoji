@@ -10,6 +10,7 @@ plugins {
 
 licensee {
   allow("Apache-2.0")
+  allowUrl("https://opensource.org/licenses/MIT")
 }
 
 metalava {
@@ -23,7 +24,6 @@ kotlin {
   androidTarget {
     publishLibraryVariants("release")
   }
-//  ios("ios")
   jvm()
   jvmToolchain(11)
 

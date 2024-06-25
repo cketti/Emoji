@@ -16,6 +16,7 @@
 
 package com.vanniktech.emoji
 
+import de.cketti.codepoints.CodePoints
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
@@ -23,7 +24,7 @@ class EmojiTest {
   @Test fun multipleCodePoints() {
     val emoji = emojiReminderRibbon.variants.first()
     assertEquals(expected = 3, actual = emoji.unicode.length)
-    assertEquals(expected = String(intArrayOf(0x1F397, 0xFE0F), 0, 2), actual = emoji.unicode)
+    assertEquals(expected = CodePoints.toString(0x1F397, 0xFE0F), actual = emoji.unicode)
   }
 
   @Test fun baseWithoutVariant() {
@@ -43,16 +44,16 @@ class EmojiTest {
 
   @Test fun baseWithRecursiveVariant() {
     val variantOfVariant = TestEmoji(
-      unicode = String(codePoints = intArrayOf(0x4321), offset = 0, length = 1),
+      unicode = CodePoints.toString(0x4321),
       shortcodes = listOf("test"),
     )
     val variant = TestEmoji(
-      unicode = String(codePoints = intArrayOf(0x5678), offset = 0, length = 1),
+      unicode = CodePoints.toString(0x5678),
       shortcodes = listOf("test"),
       variants = listOf(variantOfVariant),
     )
     val emoji = TestEmoji(
-      unicode = String(codePoints = intArrayOf(0x1234), offset = 0, length = 1),
+      unicode = CodePoints.toString(0x1234),
       shortcodes = listOf("test"),
       variants = listOf(variant),
     )

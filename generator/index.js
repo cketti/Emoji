@@ -237,7 +237,7 @@ function generateEmojiCode(target, emojis, indent = 4, isVariant = false) {
         const usesSprites = target.module !== "google-compat" && target.module !== "androidx-emoji2"
 
         const result = `${target.name}(${separator}` + [
-            (useNamedArguments ? `unicode = ` : "") + `String(intArrayOf(${transformedUnicodeParts}), 0, ${unicodeParts.length})`,
+            (useNamedArguments ? `unicode = ` : "") + `CodePoints.toString(${transformedUnicodeParts})`,
             (useNamedArguments ? `${newLinePrefix}shortcodes = ` : " ") + `${generateShortcodeCode(it)}`,
             usesSprites ? ((useNamedArguments ? `${newLinePrefix}x = ` : " ") + `${it.x}`) : null,
             usesSprites ? ((useNamedArguments ? `${newLinePrefix}y = ` : " ") + `${it.y}`) : null
@@ -387,21 +387,23 @@ async function generateCode(map, targets) {
     });
 
     for (const target of targets) {
-        const srcDir = `../emoji-${target.module}/src/androidMain/kotlin/com/vanniktech/emoji/${target.package}`;
-        const commonSrcDir = `../emoji-${target.module}/src/commonMain/kotlin/com/vanniktech/emoji/${target.package}`;
-        const jvmSrcDir = `../emoji-${target.module}/src/jvmMain/kotlin/com/vanniktech/emoji/${target.package}`;
+        const androidMain = `../emoji-${target.module}/src/androidMain/kotlin/com/vanniktech/emoji/${target.package}`;
+        const commonMain = `../emoji-${target.module}/src/commonMain/kotlin/com/vanniktech/emoji/${target.package}`;
+        const jvmMain = `../emoji-${target.module}/src/jvmMain/kotlin/com/vanniktech/emoji/${target.package}`;
+        const iosMain = `../emoji-${target.module}/src/iosMain/kotlin/com/vanniktech/emoji/${target.package}`;
 
         const isGoogleCompat = target.module === "google-compat"
         const isAndroidxEmoji2 = target.module === "androidx-emoji2"
 
         if (isGoogleCompat || isAndroidxEmoji2) {
-            await fs.emptyDir(`${commonSrcDir}/category`)
+            await fs.emptyDir(`${commonMain}/category`)
         } else {
-            await fs.emptyDir(commonSrcDir);
-            await fs.mkdir(`${commonSrcDir}/category`);
+            await fs.emptyDir(commonMain);
+            await fs.mkdir(`${commonMain}/category`);
         }
 
-        await fs.emptyDir(jvmSrcDir);
+        await fs.emptyDir(jvmMain);
+        await fs.emptyDir(iosMain);
 
         let strips = 0;
         for (const [category, emojis] of entries) {
@@ -416,7 +418,7 @@ async function generateCode(map, targets) {
 
                 chunkClasses.push(chunkClass)
 
-                await fs.writeFile(`${commonSrcDir}/category/${chunkClass}.kt`,
+                await fs.writeFile(`${commonMain}/category/${chunkClass}.kt`,
                     template(categoryChunkTemplate)({
                         package: target.package,
                         name: target.name,
@@ -427,7 +429,7 @@ async function generateCode(map, targets) {
                 );
             }
 
-            await fs.writeFile(`${commonSrcDir}/category/${category}Category.kt`,
+            await fs.writeFile(`${commonMain}/category/${category}Category.kt`,
                 template(categoryTemplate)({
                     package: target.package,
                     name: target.name,
@@ -449,21 +451,21 @@ async function generateCode(map, targets) {
         })
 
         if (isGoogleCompat) {
-            await fs.writeFile(`${srcDir}/${target.name}Provider.kt`, template(emojiProviderGoogleCompatTemplate)({
+            await fs.writeFile(`${androidMain}/${target.name}Provider.kt`, template(emojiProviderGoogleCompatTemplate)({
                 package: target.package,
                 imports: imports,
                 name: target.name,
                 categories: categories,
             }));
         } else if (isAndroidxEmoji2) {
-            await fs.writeFile(`${srcDir}/${target.name}Provider.kt`, template(emojiProviderAndroidx2Template)({
+            await fs.writeFile(`${androidMain}/${target.name}Provider.kt`, template(emojiProviderAndroidx2Template)({
                 package: target.package,
                 imports: imports,
                 name: target.name,
                 categories: categories,
             }));
         } else {
-            await fs.writeFile(`${srcDir}/${target.name}Provider.kt`, template(emojiProviderAndroid)({
+            await fs.writeFile(`${androidMain}/${target.name}Provider.kt`, template(emojiProviderAndroid)({
                 package: target.package,
                 imports: imports,
                 name: target.name,
@@ -472,7 +474,14 @@ async function generateCode(map, targets) {
             }));
         }
 
-        await fs.writeFile(`${jvmSrcDir}/${target.name}Provider.kt`, template(emojiProviderJvm)({
+        await fs.writeFile(`${jvmMain}/${target.name}Provider.kt`, template(emojiProviderJvm)({
+            package: target.package,
+            imports: imports,
+            name: target.name,
+            categories: categories,
+        }));
+
+        await fs.writeFile(`${iosMain}/${target.name}Provider.kt`, template(emojiProviderJvm)({
             package: target.package,
             imports: imports,
             name: target.name,
@@ -480,17 +489,17 @@ async function generateCode(map, targets) {
         }));
 
         if (isGoogleCompat) {
-            await fs.writeFile(`${commonSrcDir}/${target.name}.kt`, template(emojiGoogleCompatTemplate)({
+            await fs.writeFile(`${commonMain}/${target.name}.kt`, template(emojiGoogleCompatTemplate)({
                 package: target.package,
                 name: target.name,
             }));
         } else if (isAndroidxEmoji2) {
-            await fs.writeFile(`${commonSrcDir}/${target.name}.kt`, template(emojiAndroidx2Template)({
+            await fs.writeFile(`${commonMain}/${target.name}.kt`, template(emojiAndroidx2Template)({
                 package: target.package,
                 name: target.name,
             }));
         } else {
-            await fs.writeFile(`${commonSrcDir}/${target.name}.kt`, template(emojiTemplate)({
+            await fs.writeFile(`${commonMain}/${target.name}.kt`, template(emojiTemplate)({
                 package: target.package,
                 name: target.name,
             }));

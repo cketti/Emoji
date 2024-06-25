@@ -14,13 +14,17 @@
  * limitations under the License.
  */
 
-package com.vanniktech.emoji.<%= package %>.category
+package com.vanniktech.emoji.<%= package %>
 
-import com.vanniktech.emoji.<%= package %>.<%= name %>
-import de.cketti.codepoints.CodePoints
+import com.vanniktech.emoji.EmojiCategory
+import com.vanniktech.emoji.EmojiProvider
+<%= imports %>
 
-internal object <%= category %>CategoryChunk<%= index %> {
-  internal val EMOJIS: List<<%= name %>> = listOf(
-    <%= data %>
-  )
+class <%= name %>Provider : EmojiProvider {
+  override val categories: Array<EmojiCategory>
+    get() = arrayOf(<% categories.forEach(function(category) { %>
+      <%= category.name %>(),<% }); %>
+    )
+
+  override fun release() = Unit
 }
